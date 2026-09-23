@@ -159,7 +159,7 @@ public:
   {
     /// returns digitized (ADC) amplitude
     float A = this->GetDE(ipmt);
-    if (A==0.90) {return 0;}
+    if (A==0.0) {return 0;}
     short N = (short)(A/pC_per_ADCBins[ipmt] + shift_ADC0[ipmt]);
     if (N>=ADCBin) {return ADCBin-1;}
     if (N<0){return 0;}
